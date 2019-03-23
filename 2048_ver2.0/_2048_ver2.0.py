@@ -178,17 +178,11 @@ for n in gameTree:
         t = time()
         te = '已经生成了'+str(len(gameTree))+'个节点, 目前在第'+str(gameTree[-1].status.depth)+'层, 耗时'+str(t-begin)+'s'
         print(te)
-        f = open('b.txt', 'w')
-        f.write(te)
-        f.close()
     if gameTree[-1].status.depth == 8:
         break
 
 a = '生成完成，共'+str(len(gameTree))+'个节点'
 print(a)
-f = open('a.txt', 'w')
-f.write(a)
-f.close()
 
 arr = np.asarray(gameTree)
 np.save('arr1.npy', arr)
